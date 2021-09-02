@@ -3,6 +3,7 @@ package com.example.covid19_tracker
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import com.example.covid19_tracker.databinding.ActivityMainBinding
 import com.google.gson.Gson
 import kotlinx.coroutines.*
@@ -13,13 +14,14 @@ import java.util.concurrent.TimeUnit
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var stateAdapter: StateAdapter
 
     @DelicateCoroutinesApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        binding.list.addHeaderView(LayoutInflater.from(this).inflate(R.layout.item_header, binding.list,false))
         fetchResult()
 
     }
@@ -33,10 +35,16 @@ class MainActivity : AppCompatActivity() {
                 val data = Gson().fromJson(result, Response::class.java)
                 launch(Dispatchers.Main) {
                     bindCombinedData(data.statewise[0])
+                    bindStateWiseData(data.statewise.subList(1, data.statewise.size))
                 }
             }
         }
 
+    }
+
+    private fun bindStateWiseData(subList: List<StatewiseItem>) {
+        stateAdapter = StateAdapter(subList)
+        binding.list.adapter = stateAdapter
     }
 
     @SuppressLint("SimpleDateFormat", "SetTextI18n")

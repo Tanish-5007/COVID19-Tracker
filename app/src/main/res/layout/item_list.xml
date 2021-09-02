@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:paddingEnd="16dp"
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/stateTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1.1"
-        android:text="STATE/UT"
         android:textAllCaps="true"
+        android:maxLines="2"
         android:textColor="@color/aqua"
         android:textStyle="bold"
         android:padding="8dp"/>
 
     <TextView
+        android:id="@+id/confirmedTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="CNFMD"
+        android:textAlignment="viewEnd"
         android:textAllCaps="true"
-        android:textColor="@color/red"
         android:textStyle="bold"
         android:padding="8dp"/>
 
     <TextView
+        android:id="@+id/activeTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="ACTV"
         android:textAllCaps="true"
-        android:textColor="@color/blue"
+        android:textAlignment="viewEnd"
         android:textStyle="bold"
         android:padding="8dp"/>
 
     <TextView
+        android:id="@+id/recoveredTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="RCVRD"
         android:textAllCaps="true"
-        android:textColor="@color/green"
+        android:textAlignment="viewEnd"
         android:textStyle="bold"
         android:padding="8dp"/>
 
     <TextView
+        android:id="@+id/deathTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="DCSD"
+        android:textAlignment="viewEnd"
         android:textAllCaps="true"
-        android:textColor="@color/yellow"
         android:textStyle="bold"
         android:padding="8dp"/>
 
