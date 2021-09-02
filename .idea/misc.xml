@@ -13,6 +13,8 @@
         <entry key="..\:/Android_CodingBlocks/COVID19Tracker/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/Android_CodingBlocks/COVID19Tracker/app/src/main/res/drawable/ic_patient.xml" value="0.2703125" />
         <entry key="..\:/Android_CodingBlocks/COVID19Tracker/app/src/main/res/drawable/ic_virus.xml" value="0.2703125" />
+        <entry key="..\:/Android_CodingBlocks/COVID19Tracker/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android_CodingBlocks/COVID19Tracker/app/src/main/res/layout/item_header.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
